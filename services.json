@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Frigate",
+        "description": "NVR with realtime IP camera video analytics.",
+        "protocol": "https",
+        "port": 8971
+    },
+    {
+        "name": "Crafty Controller",
+        "description": "Minecraft server management dashboard.",
+        "protocol": "https",
+        "port": 8443
+    },
+    {
+        "name": "PiHole",
+        "description": "Network-wide ad blocker and DNS sinkhole.",
+        "protocol": "http",
+        "port": 8090,
+        "page": "admin/login.php",
+        "ip": "192.168.0.3"
+    }
+]

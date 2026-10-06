@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    background-color: #e0e0e0;
+    font-family: "MS PGothic", "Trebuchet MS", Verdana, sans-serif;
+    color: #000000;
+    font-size: 12px;
+    line-height: 1.4;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-card {
+    background-color: #f5f5f5;
+    border: 1px solid #707070;
+    width: 650px;
+    height: 380px;
+    display: flex;
+    padding: 12px;
+    gap: 12px;
+    /* Sombra clásica tipo drop-shadow: 4px a la derecha, 4px abajo, sin desenfoque */
+    box-shadow: 4px 4px 0px #808080;
+}
+
+
+.card-left {
+    width: 220px;
+    height: 100%;
+    flex-shrink: 0;
+    border: 1px solid #707070;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-right {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.server-title {
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #204080;
+    color: #ffffff;
+    padding: 4px 8px;
+    margin-bottom: 8px;
+    border: 1px solid #000000;
+    letter-spacing: 0.5px;
+}
+
+.service-list-container {
+    flex-grow: 1;
+    overflow-y: scroll;
+    border: 1px solid #707070;
+    background-color: #ffffff;
+    padding: 2px;
+}
+
+.service-list {
+    list-style: none;
+}
+
+.service-item {
+    border-bottom: 1px dashed #aaaaaa;
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-link {
+    display: block;
+    padding: 6px 6px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.service-link:hover {
+    background-color: #eef2f7;
+}
+
+.service-link:hover .service-name {
+    text-decoration: underline;
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.service-name {
+    color: #000080;
+}
+
+.service-port {
+    color: #666666;
+    font-family: monospace;
+    font-weight: normal;
+}
+
+.service-desc {
+    color: #444444;
+    font-size: 11px;
+}
+
+/* PHONES */
+
+@media screen and (max-width: 680px) {
+    body {
+        display: block;
+        padding: 10px;
+        height: auto;
+    }
+
+    .main-card {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-left {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .card-right {
+        height: auto;
+        overflow: visible;
+    }
+
+    .service-list-container {
+        overflow-y: visible;
+        height: auto;
+    }
+}
